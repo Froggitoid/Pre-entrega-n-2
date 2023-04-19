@@ -1,0 +1,366 @@
+    /* INICIO DE EL CSS DE EL APARTADO INDEX.HTML */
+
+*{
+    /* quite las medidas predeterminadas. */
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    /* Determinacion de fuentes. */
+
+@font-face {
+    font-family: oswald;
+    src: url(./Fonts/Oswald_variable.ttf);
+}
+
+@font-face {
+    font-family: edu;
+    src: url(./Fonts/Edu_nsw_act.ttf);
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(./Fonts/BebasNeue-Regular.ttf);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./Images/Gem_Bg.jpg);
+    background-size: cover;
+    width: 100vw; 
+    height: 100vh; 
+    overflow-y: scroll;  
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+
+}
+
+    /* Inicio de la configuracion de el header. */
+
+header{
+    height: 100px;
+    display: flex;
+    font-family: oswald;
+    font-size: 20px;
+    padding: 20px;
+    text-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 4px black;
+    background-color: rgba(0, 0, 0, 0.443);
+}
+
+nav{
+    flex-direction: row;
+    flex-flow: row, nowrap;
+    justify-content: end;
+    align-items: end;
+    align-content: space-evenly;
+    margin-right: 10px;
+}
+
+
+.nav-link{
+    color: aliceblue;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    transition: 0.3s;
+}
+
+.logo{
+    font-weight: bolder;
+    margin-left: 10px;
+    flex: 1;
+    color: aliceblue;
+    text-shadow: 3px 3px 10px black;
+    }
+
+
+    /* Fin de la configuracion de el header. */
+    /*  */
+    /* Configuracion de el cuerpo y estructura de la pagina. */
+main{
+    padding: 80px;
+    margin-left: 20px;
+}
+
+.block{
+    height: auto;
+    font-family: edu;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.443);
+    color: aliceblue;
+    text-shadow: 3px 3px 10px black;
+    box-shadow: 1px 1px 4px black;
+    }
+
+
+.block_title{
+    text-transform: uppercase;
+    font-family: oswald;
+}
+
+.block_p{
+    font-size: 20px;
+}
+
+    /* Configuracion de el footer. */
+
+footer{
+    height: 70px;
+    padding: 20px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.443);
+    color: aliceblue;
+    font-family: oswald;
+    margin-top: auto;
+    text-shadow: 3px 3px 10px black;
+    box-shadow: 1px -1px 4px black;
+}
+
+    /* Fin de la configuracion de el footer. */
+    /*  */
+    /* Inicio de la configuracion de Media Querys. */
+    /* Indica que va a represantar este cambio en un ancho maximo de 754px */
+@media only screen and (max-width:754px) {
+
+    header{
+        font-size: 15px;
+        padding-bottom:  20px;      
+        height: auto;             /* Indique que el tamaño de la fuente se reduzca y que */
+        display: flex;            /* la altura de el header sea automatica, para asi poder */
+        flex-flow: column;        /* Comprimir todos los items en el <nav> sin que se vea raro */
+    }
+
+    .block_title{
+        font-size: 10px;
+    }
+
+    .block_p{
+        font-size: 10px;
+    }
+
+    
+    .footer_h3{
+        font-size: 15px;
+    }
+    
+}
+
+    /* Indica que va a represantar este cambio en un ancho maximo de 400px */
+
+@media only screen and (max-width:400px){
+    .nav{
+        display: flex;
+        justify-content: left;
+        flex-flow: column;
+    }
+
+    .block{
+        width: 200px;
+    }
+}
+
+
+/* *FIN DE EL CSS DE EL APARTADO INDEX.HTML* */
+                /*  */
+                /*  */
+                /*  */
+/* INICIO DE EL CSS DE EL APARTADO UBICACION.HTML */
+
+.body--ubi{
+    width: 100vw; /* Ancho igual al 100% del ancho de la ventana del navegador */
+    height: 100vh; /* Altura igual al 100% de la altura de la ventana del navegador */
+    overflow-y: scroll; /* Habilita la barra de desplazamiento vertical solo cuando es necesaria */
+    -ms-overflow-style: none; /* Oculta la barra de desplazamiento en Internet Explorer */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en navegadores basados en Chromium */
+    background-image: url(./Images/Gem_bg\ N°2.jpg);
+    background-size: cover;
+}
+
+    /* Sacar la barra de navegacion */
+
+.body--ubi::-webkit-scrollbar{   
+    display: none;
+
+}
+
+    /* Modificacion de el instert de el google maps */
+
+.map{
+    margin-top: 100px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 para el mapa */
+    position: relative;
+}
+
+.map iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+}
+
+    /* Inicio de la modificacion a las media querys para el archivo Ubicacion.html */
+
+@media only screen and (max-width:900px) {
+
+    .map{
+        padding-bottom: 40%;       /* Principalmente se modifica el Instert del Maps*/ 
+    }
+
+}
+
+@media only screen and (max-width:400px) {
+
+    .map{
+        padding-bottom: 20%;
+    }
+
+}
+
+
+    /* FIN DE EL CSS DE EL APARTADO UBICACION.HTML  */
+                        /*  */
+                        /*  */
+                        /*  */
+    /* INICIO DE EL CSS DE EL APARTADO CONTACTO.HTML */
+
+.body--cont{
+    background-image: url(./Images/Gem_bg\ N°3.jpg);
+    background-size: cover;
+}
+
+
+.info{
+    font-family: bebas;
+    height: 30%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.443);
+    margin-left: 500px;
+    margin-top: 250px;
+    color: aliceblue;
+    box-shadow: -2px 2px 3px black;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+.info_title{
+    padding: 20px;
+}
+
+.info_text{
+    padding: 20px;
+}
+
+            /* FIN DE EL CSS DE EL APARTADO CONTACTO.HTML */
+                            /*  */
+                            /*  */
+            /* INICIO DE EL CSS DE EL APARTADO NOSOTROS.HTML */
+
+.body--us{
+    background-image: url(./Images/Gem_bg\ N°4.jpg);
+    background-size: cover;
+}
+
+.nosotros{
+    height: auto;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.443);
+    margin-left: 20px;
+    margin-top: 100px;
+    color: aliceblue;
+    box-shadow: -2px 2px 3px black;
+    text-shadow: 2px 2px 5px black;
+    padding: 50px;
+    font-family: bebas;
+    font-size: 20px;
+}
+
+.nosotros_text{
+    font-family: edu;
+    padding: 30px;
+    text-shadow: 4px 4px 10px black;
+}
+
+            /*FIN DE EL CSS DE EL APARTADO NOSOTROS*/ 
+                            /*  */
+                            /*  */
+            /* INICIO DE EL CSS DE EL APARTADO PRODUCTOS */
+
+
+.advice{
+    font-family: oswald;
+    font-size: 30px;
+    padding: 40px;
+    color: aliceblue;
+    text-shadow: 3px 3px 10px black;
+    text-decoration: underline;
+    transition: 0.2s;
+    transform: scale(1);
+}
+
+.advice:hover{
+    transition: 0.2s;
+    text-shadow: 2px 2px 10px white;
+}
+
+.galeria{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 500px);
+    grid-template-rows: repeat(8, 200px);
+    grid-gap: 20px;
+}
+
+.galeria__item{
+    margin-top: 200px;
+    width: 75%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s;
+    transform: scale(1);
+}
+
+.galeria__item:hover{
+    transition: 0.2s;
+    transform: scale(1.01);
+}
+
+.galeria__item--1{
+    background-image: url(./Images/Aztc_Coin.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.galeria__item--2{
+    background-image: url(./Images/CyanOne.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;}
+
+.galeria__item--3{
+    background-image: url(./Images/YellowOne.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;}
+
+.galeria__item--4{
+    background-image: url(./Images/GreyOne.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;}
